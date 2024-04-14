@@ -1,0 +1,106 @@
+2024-04-13 07:12:51,883 INFO:   Effective batch size is 512.
+2024-04-13 07:12:51,911 INFO:   Checkpoint autoloading is enabled. Looking for latest checkpoint in "model_dir_bert_large_pytorch" directory with the following naming convention: `checkpoint_(step)(_timestamp)?.mdl`.
+2024-04-13 07:12:51,912 INFO:   No checkpoints were found in "model_dir_bert_large_pytorch".
+2024-04-13 07:12:51,912 INFO:   No checkpoint was provided. Using randomly initialized model parameters.
+2024-04-13 07:12:53,218 INFO:   Saving checkpoint at step 0
+2024-04-13 07:13:20,360 INFO:   Saved checkpoint model_dir_bert_large_pytorch/checkpoint_0.mdl
+2024-04-13 07:13:35,413 INFO:   Compiling the model. This may take a few minutes.
+2024-04-13 07:13:35,414 INFO:   Defaulted to use the job-operator namespace as the usernode config /opt/cerebras/config_v2 only has access to that namespace.
+2024-04-13 07:13:36,924 INFO:   Initiating a new image build job against the cluster server.
+2024-04-13 07:13:37,037 INFO:   Custom worker image build is disabled from server.
+2024-04-13 07:13:37,043 INFO:   Defaulted to use the job-operator namespace as the usernode config /opt/cerebras/config_v2 only has access to that namespace.
+2024-04-13 07:13:37,383 INFO:   Initiating a new compile wsjob against the cluster server.
+2024-04-13 07:13:37,503 INFO:   compile job id: wsjob-te2ugslgoqmqn5xlfymjxa, remote log path: /n1/wsjob/workdir/job-operator/wsjob-te2ugslgoqmqn5xlfymjxa
+2024-04-13 07:13:47,548 INFO:   Poll ingress status: Waiting for job service readiness.
+2024-04-13 07:14:17,552 INFO:   Ingress is ready: Job ingress ready, poll ingress success.
+2024-04-13 07:14:21,737 INFO:   Pre-optimization transforms...
+2024-04-13 07:14:27,379 INFO:   Optimizing layouts and memory usage...
+2024-04-13 07:14:27,423 INFO:   Gradient accumulation enabled
+2024-04-13 07:14:27,424 WARNING:   Gradient accumulation will search for an optimal micro batch size based on internal performance models, which can lead to an increased compile time. Specify `micro_batch_size` option in the 'train_input/eval_input' section of your .yaml parameter file to set the gradient accumulation microbatch size, if an optimal microbatch size is known.
+
+2024-04-13 07:14:27,427 INFO:   Gradient accumulation trying sub-batch size 8...
+2024-04-13 07:14:32,925 INFO:   Exploring floorplans
+2024-04-13 07:14:40,162 INFO:   Exploring data layouts
+2024-04-13 07:14:51,769 INFO:   Optimizing memory usage
+2024-04-13 07:15:42,258 INFO:   Gradient accumulation trying sub-batch size 64...
+2024-04-13 07:15:47,877 INFO:   Exploring floorplans
+2024-04-13 07:15:56,898 INFO:   Exploring data layouts
+2024-04-13 07:16:15,017 INFO:   Optimizing memory usage
+2024-04-13 07:16:49,761 INFO:   Gradient accumulation trying sub-batch size 32...
+2024-04-13 07:16:55,367 INFO:   Exploring floorplans
+2024-04-13 07:17:02,555 INFO:   Exploring data layouts
+2024-04-13 07:17:17,053 INFO:   Optimizing memory usage
+2024-04-13 07:17:49,960 INFO:   Gradient accumulation trying sub-batch size 128...
+2024-04-13 07:17:56,740 INFO:   Exploring floorplans
+2024-04-13 07:18:08,171 INFO:   Exploring data layouts
+2024-04-13 07:18:28,090 INFO:   Optimizing memory usage
+2024-04-13 07:18:57,261 INFO:   Gradient accumulation trying sub-batch size 256...
+2024-04-13 07:19:02,760 INFO:   Exploring floorplans
+2024-04-13 07:19:20,126 INFO:   Exploring data layouts
+2024-04-13 07:19:42,598 INFO:   Optimizing memory usage
+2024-04-13 07:20:27,162 INFO:   Exploring floorplans
+2024-04-13 07:20:30,598 INFO:   Exploring data layouts
+2024-04-13 07:21:04,565 INFO:   Optimizing memory usage
+2024-04-13 07:21:41,911 INFO:   No benefit from gradient accumulation expected. Compile will proceed at original per-box batch size 512 with 6 lanes
+
+2024-04-13 07:21:41,961 INFO:   Post-layout optimizations...
+2024-04-13 07:21:55,646 INFO:   Allocating buffers...
+2024-04-13 07:21:59,205 INFO:   Code generation...
+2024-04-13 07:22:12,681 INFO:   Compiling image...
+2024-04-13 07:22:12,687 INFO:   Compiling kernels
+2024-04-13 07:25:37,924 INFO:   Compiling final image
+2024-04-13 07:28:28,779 INFO:   Compile artifacts successfully written to remote compile directory. Compile hash is: cs_8939750200954608837
+2024-04-13 07:28:28,842 INFO:   Heartbeat thread stopped for wsjob-te2ugslgoqmqn5xlfymjxa.
+2024-04-13 07:28:28,844 INFO:   Compile was successful!
+2024-04-13 07:28:28,849 INFO:   Programming Cerebras Wafer Scale Cluster for execution. This may take a few minutes.
+2024-04-13 07:28:31,156 INFO:   Defaulted to use the job-operator namespace as the usernode config /opt/cerebras/config_v2 only has access to that namespace.
+2024-04-13 07:28:31,520 INFO:   Initiating a new execute wsjob against the cluster server.
+2024-04-13 07:28:31,656 INFO:   execute job id: wsjob-cihnv8w99r7qwtmrul8vsj, remote log path: /n1/wsjob/workdir/job-operator/wsjob-cihnv8w99r7qwtmrul8vsj
+2024-04-13 07:28:41,702 INFO:   Poll ingress status: Waiting for job running, current job status: Queueing, msg: job is queueing. Job queue status: current job is top of queue but likely blocked by running jobs, 1 execute job(s) running using 2 system(s), 1 compile job(s) running using 67Gi memory. For more information, please run 'csctl get jobs'.
+2024-04-13 07:28:51,675 INFO:   Poll ingress status: Waiting for job running, current job status: Queueing, msg: job is queueing. Job queue status: current job is top of queue but likely blocked by running jobs, 1 execute job(s) running using 2 system(s). For more information, please run 'csctl get jobs'.
+2024-04-13 07:29:30,116 INFO:   Heartbeat thread stopped for wsjob-cihnv8w99r7qwtmrul8vsj.
+2024-04-13 07:29:30,129 INFO:   Processed 0 sample(s) in 969.764846916 seconds.
+2024-04-13 07:29:30,149 ERROR:   Uncaught exception:
+Traceback (most recent call last):
+  File "run.py", line 45, in <module>
+    main()
+  File "run.py", line 36, in main
+    main(
+  File "../../../../modelzoo/common/pytorch/run_utils.py", line 267, in main
+    return run_with_params(
+  File "../../../../modelzoo/common/pytorch/run_utils.py", line 319, in run_with_params
+    return run_cstorch_flow(params, model_fn, train_data_fn, eval_data_fn)
+  File "../../../../modelzoo/common/pytorch/run_cstorch_flow.py", line 123, in run_cstorch_flow
+    run_cstorch_train(
+  File "../../../../modelzoo/common/pytorch/run_cstorch_flow.py", line 771, in run_cstorch_train
+    for step, batch in enumerate(executor, start=1):
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/cerebras_pytorch/utils/data/data_executor.py", line 224, in __iter__
+    self.backend.on_batch_end()
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/cerebras_pytorch/backend/ltc_backend.py", line 452, in on_batch_end
+    torch._lazy.mark_step()
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/torch/_lazy/__init__.py", line 17, in mark_step
+    torch._C._lazy._mark_step(device, [], wait=wait)
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/cerebras_pytorch/backend/ltc_backend.py", line 348, in execute
+    self.appliance.execute(
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/cerebras_pytorch/core/appliance.py", line 177, in execute
+    response = self.request_execute_job(mgmt_client, self._compile_resp)
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/cerebras_appliance/appliance_manager.py", line 666, in request_execute_job
+    return mgmt_client.init_execute_job(
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/cerebras_appliance/cluster/client.py", line 594, in init_execute_job
+    return self.get_job_handle(
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/cerebras_appliance/cluster/client.py", line 687, in get_job_handle
+    ingress_response = self._poll_ingress_readiness(job_id)
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/cerebras_appliance/cluster/client.py", line 397, in _poll_ingress_readiness
+    for response in responses:
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/grpc/_channel.py", line 426, in __next__
+    return self._next()
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/grpc/_channel.py", line 817, in _next
+    _common.wait(self._state.condition.wait, _response_ready)
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/grpc/_common.py", line 141, in wait
+    _wait_once(wait_fn, MAXIMUM_WAIT_TIMEOUT, spin_cb)
+  File "/home/ellenketter/R_2.1.1/venv_cerebras_pt/lib/python3.8/site-packages/grpc/_common.py", line 106, in _wait_once
+    wait_fn(timeout=timeout)
+  File "/software/cerebras/python3.8/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+

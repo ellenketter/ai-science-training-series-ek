@@ -1,0 +1,15 @@
+2024-04-14 04:00:41,619 INFO:   Effective batch size is 2048.
+2024-04-14 04:00:41,644 INFO:   Checkpoint autoloading is enabled. Looking for latest checkpoint in "model_dir_bert_large_pytorch" directory with the following naming convention: `checkpoint_(step)(_timestamp)?.mdl`.
+2024-04-14 04:00:41,646 INFO:   No checkpoints were found in "model_dir_bert_large_pytorch".
+2024-04-14 04:00:41,646 INFO:   No checkpoint was provided. Using randomly initialized model parameters.
+2024-04-14 04:00:42,917 INFO:   Saving checkpoint at step 0
+2024-04-14 04:01:11,191 INFO:   Saved checkpoint model_dir_bert_large_pytorch/checkpoint_0.mdl
+2024-04-14 04:01:26,413 INFO:   Compiling the model. This may take a few minutes.
+2024-04-14 04:01:26,415 INFO:   Defaulted to use the job-operator namespace as the usernode config /opt/cerebras/config_v2 only has access to that namespace.
+2024-04-14 04:01:27,646 INFO:   Initiating a new image build job against the cluster server.
+2024-04-14 04:01:27,760 INFO:   Custom worker image build is disabled from server.
+2024-04-14 04:01:27,766 INFO:   Defaulted to use the job-operator namespace as the usernode config /opt/cerebras/config_v2 only has access to that namespace.
+2024-04-14 04:01:28,125 INFO:   Initiating a new compile wsjob against the cluster server.
+2024-04-14 04:01:28,247 INFO:   compile job id: wsjob-9dec6ukawsdyaftkhqnwca, remote log path: /n1/wsjob/workdir/job-operator/wsjob-9dec6ukawsdyaftkhqnwca
+2024-04-14 04:01:38,291 INFO:   Poll ingress status: Waiting for job running, current job status: Queueing, msg: job is queueing. Job queue status: current job is top of queue but likely blocked by running jobs, 1 execute job(s) running using 1 system(s), 1 compile job(s) running using 67Gi memory. For more information, please run 'csctl get jobs'.
+2024-04-14 04:02:18,285 INFO:   Poll ingress status: Waiting for job running, current job status: Queueing, msg: job is queueing. Job queue status: current job is top of queue but likely blocked by running jobs, 2 execute job(s) running using 2 system(s). For more information, please run 'csctl get jobs'.

@@ -1,0 +1,8 @@
+2024-04-10 04:55:32,826 - apps.nlp.transformers_on_rdu.transformers_hook - Process ID 2548454 - info     - NLP app started.
+2024-04-10 04:55:32,948 - apps.nlp.transformers_on_rdu.tasks.utils.lazy_gpt2_pretrain - Process ID 2548454 - info     - Patching gpt2 hf model attr 'GPT2PreTrainedModel._init_weights'
+2024-04-10 04:55:32,949 - apps.nlp.transformers_on_rdu.tasks.utils.lazy_gpt2_pretrain - Process ID 2548454 - info     - Patching mlm_ns hf model attr 'BertPreTrainedModel._init_weights'
+2024-04-10 04:55:50,548 - apps.nlp.transformers_on_rdu.tasks.utils.lazy_gpt2_pretrain - Process ID 2548454 - warning  - This module is not supported under lazy param initialization: tasks.lm_tasks.bert_mlperf_lm.BertForMaskedLM.BertLMPredictionHead
+2024-04-10 04:55:52,156 - apps.nlp.transformers_on_rdu.transformers_hook - Process ID 2548454 - info     - Dataset is loading.
+2024-04-10 04:55:52,156 - apps.nlp.transformers_on_rdu.transformers_hook - Process ID 2548454 - info     - Dataset has finished loading.
+2024-04-10 04:55:52,156 - apps.nlp.transformers_on_rdu.transformers_hook - Process ID 2548454 - info     - transformers_hook app running in compile mode
+2024-04-10 05:08:51,319 - apps.nlp.transformers_on_rdu.transformers_hook - Process ID 2548454 - info     - NLP app finished
